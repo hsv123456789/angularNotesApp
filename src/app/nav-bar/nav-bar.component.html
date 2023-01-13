@@ -1,0 +1,14 @@
+<nav class="p-4 bg-blue-800 flex justify-between text-white w-full">
+  <h1 class="mt-3 text-lg hover:text-2xl">Notes app</h1>
+
+  <button
+    class="bg-black hover:shadow-2xl p-3 rounded-md"
+    (click)="modalOpener()"
+  >
+    Create a new note
+  </button>
+</nav>
+<br />
+<div *ngIf="closer">
+  <app-note-creator [visible]="closer"></app-note-creator>
+</div>

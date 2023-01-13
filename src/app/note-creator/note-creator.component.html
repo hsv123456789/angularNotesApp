@@ -1,0 +1,34 @@
+<section *ngIf="visible">
+  <div
+    class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
+  >
+    <div class="bg-white p-20 rounded-md flex flex-col">
+      <label for="#title" class="text-lg">Title</label>
+      <input
+        type="text"
+        id="title"
+        class="focus:outline-none p-2 border border-slate-600 rounded-md"
+        [(ngModel)]="note.title"
+      />
+      <br />
+      <label for="#content" class="text-lg">Content</label>
+      <textarea
+        name="content"
+        id="#content"
+        cols="30"
+        rows="10"
+        class="focus:outline-none border border-slate-600 rounded-md"
+        [(ngModel)]="note.content"
+      ></textarea>
+      <br />
+      <div>
+        <button
+          class="p-3 bg-red-800 hover:bg-red-700 rounded-md text-white"
+          (click)="visiblityChanger()"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
